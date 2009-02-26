@@ -1,0 +1,43 @@
+<%= link_to 'Back', pledges_path %>
+<table width="100%">
+  <% form_for(@pledge) do |pledge_form| %>
+	  <%= pledge_form.error_messages %>
+		<%= pledge_form.hidden_field :organization %>
+    <tr>
+        <td>You are pledge to support the Rural Savers Program operated by <%= @pledge.organization.name %>
+        </td>
+        <td align="left"><%= image_tag @pledge.organization.photo.public_filename, :size => @pledge.organization.photo.image_size %>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Amount:
+        </td>
+        <td align="left"><%= text_field_tag("amount0", @pledge.pledge_line_items[0].amount, :size => 5) %>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Would you like to donate to SaveTogether?
+        </td>
+        <td align="left">
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Amount:
+        </td>
+        <td align="left"><%= text_field_tag("amount1", @pledge.pledge_line_items[1].amount, :size => 5) %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>Terms and Conditions
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td><%= submit_tag "Continue" %>
+        </td>
+    </tr>
+  <% end %>
+</table>

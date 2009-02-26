@@ -1,0 +1,42 @@
+<table class="records">
+    <tr class="record">
+        <td class="photo-column" align="center"><%= image_tag @orgs[0].photo.thumbnails[0].public_filename, :size => @orgs[0].photo.thumbnails[0].image_size %>
+        </td>
+        <td class="photo-column" align="center"><%= image_tag @orgs[1].photo.thumbnails[0].public_filename, :size => @orgs[1].photo.thumbnails[0].image_size %>
+        </td>
+        <td class="photo-column" align="center"><%= image_tag @orgs[2].photo.thumbnails[0].public_filename, :size => @orgs[2].photo.thumbnails[0].image_size %>
+        </td>
+    </tr>
+    <tr class="record">
+        <td><%= description_column(@orgs[0]) %>
+        </td>
+        <td><%= description_column(@orgs[1]) %>
+        </td>
+        <td><%= description_column(@orgs[2]) %>
+        </td>
+    </tr>
+    <tr class="record">
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[0].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[0].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        </td>
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[1].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[1].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        </td>
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[2].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[2].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        </td>
+    </tr>
+    <tr class="record">
+        <td><%= statement_column(@orgs[0].groups[0].beneficiaries[0]) %>
+        </td>
+        <td><%= statement_column(@orgs[1].groups[0].beneficiaries[0]) %>
+        </td>
+        <td><%= statement_column(@orgs[2].groups[0].beneficiaries[0]) %>
+        </td>
+    </tr>
+    <tr class="record">
+        <td align="center"><%= link_to "Donate Now", {:controller => "pledges", :action => "new", :org => @orgs[0].id} %>
+        </td>
+        <td align="center"><%= link_to "Donate Now", {:controller => "pledges", :action => "new", :org => @orgs[1].id} %>
+        </td>
+        <td align="center"><%= link_to "Donate Now", {:controller => "pledges", :action => "new", :org => @orgs[2].id} %>
+        </td>
+    </tr>
+</table>

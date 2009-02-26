@@ -1,0 +1,7 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<h1>New Photo</h1>
+
+<% form_for :photo, :url => { :action => 'create' }, :html => { :multipart => true } do |f| -%>
+  <p><%= f.file_field :uploaded_data %></p>
+  <p><%= submit_tag :Create %></p>
+<% end -%>

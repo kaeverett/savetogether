@@ -1,0 +1,26 @@
+<h1>My Profile: <%=h @user.login %> <%= link_to '(edit)', edit_user_profile_path(current_user) %></h1>
+<p>Joined on: <%=h @user.created_at.to_s(:long) %></p>
+<p>Name: <%=h @user.name %></p>
+<p>Username: <%=h @user.login %></p>
+<p>Email: <%=h @user.email %></p>
+<p>Password: <%= link_to '(change)', user_profile_password_settings_path(current_user) %></p>
+<br/>
+<h1>Listing donations</h1>
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Organization</th>
+  </tr>
+
+<% for  in @s %>
+  <tr>
+    <td><%=h .amount %></td>
+    <td><%=h .organization %>
+    <td><%= link_to 'Show',  %></td>
+    <td><%= link_to 'Destroy', , :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

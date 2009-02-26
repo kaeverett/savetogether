@@ -1,0 +1,9 @@
+TODO:
+
+- Improve blocks themeing on different regions.
+- Improve cross browser support.
+- Add more block regions.
+- Add support to RTL languages.
+- Make it color module compatible.
+- Make a patch for Drupal 7?
+- Move TODOs to issue queue.

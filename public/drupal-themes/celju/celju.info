@@ -1,0 +1,31 @@
+; $Id: celju.info,v 1.1.2.1 2008/01/10 01:55:10 jwolf Exp $
+
+name = Celju
+description = XHTML & CSS based, two columns, mutliple footer regions.
+core = 6.x
+engine = phptemplate
+regions[sidebar] = Sidebar
+regions[content_top] = Content Top
+regions[content_bottom] = Content Bottom
+regions[footerColumnLeft] = Footer Left Column @ 1/3 width
+regions[footerColumnMiddle] = Footer Middle Column @ 1/3 width
+regions[footerColumnRight] = Footer Right Column @ 1/3 width
+regions[footerContentLeft] = Footer Left Column @ 2/3 width
+regions[footerContentRight] = Footer Right Column @ 2/3 width
+regions[footer] = Footer
+;features[] = logo
+features[] = favicon
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = primary_links
+stylesheets[all][] = style.css
+
+; Information added by drupal.org packaging script on 2008-01-12
+version = "6.x-1.3"
+core = "6.x"
+project = "celju"
+datestamp = "1200120303"
+

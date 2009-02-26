@@ -1,0 +1,57 @@
+<table width="100%">
+    <tr>
+        <td>You are pledge to support the Rural Savers Program operated by <%= @pledge.organization.name %>
+        </td>
+        <td align="left"><%= image_tag @pledge.organization.photo.public_filename, :size => @pledge.organization.photo.image_size %>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Amount:
+        </td>
+        <td align="left"><%= @pledge.pledge_line_items[0].amount %>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">The Amount you are donating to SaveTogether:
+        </td>
+        <td align="left">
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Amount:
+        </td>
+        <td align="left"><%= @pledge.pledge_line_items[1].amount %>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">Total:
+        </td>
+        <td align="left"><%= @pledge.amount %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>Terms and Conditions
+        </td>
+    </tr>
+    <tr>
+        <td>After clicking the Complete Donation button, you will be take to the secure Paypal site where your donation will be processed.
+        </td>
+        <td>
+  <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+  	<input type="hidden" name="cmd" value="_cart"/>
+	<INPUT TYPE="hidden" NAME="return" value="http://www.savetogether.org/"/>
+	<input type="hidden" name="invoice" value="<%= @pledge.id %>"/>
+	<input type="hidden" name="item_name_1" value="match"/>
+	<input type="hidden" name="item_name_2" value="savetogether"/>
+	<input type="hidden" name="amount_1" value="<%= @pledge.pledge_line_items[0].amount %>"/>
+	<input type="hidden" name="amount_2" value="<%= @pledge.pledge_line_items[0].amount %>"/>
+	<input type="hidden" name="upload" value="2"/>
+	<input type="hidden" name="business" value="tom@savetogether.org"/>
+	<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt=""/>
+	<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+  </form>
+        </td>
+    </tr>
+</table>

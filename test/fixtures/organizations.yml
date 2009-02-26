@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+testOrg:
+  name: "Washington CASH"
+  phone: "206-352-1945"
+  web_site_url: "http://www.washingtoncash.org/"
+  description: "Washington Community Alliance for Self Help (CASH) is a microenterprise development organization that provides low income women, people with disabilities and other underserved individuals access to capital and business development training."

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+address1:
+  line1: "2100 24th Avenue South"
+  line2: "Suite 380"
+  city: "Seattle"
+  state: "WA"
+  zip: "98144"
+  addressable: organization1 (Organization)

@@ -1,0 +1,991 @@
+/**
+ * Celju -- $Id: style.css,v 1.1.4.1 2008/01/10 03:47:04 jwolf Exp $
+ */
+
+@import "icons.css";
+
+/* reset default styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, a, em, font, img,
+dl, dt, dd, ol, ul, li, form, label, legend,
+table, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body
+{
+  font-family:Verdana, Helvetica, sans-serif;
+  line-height:1;
+  color: #333;
+  background: #7E7672;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+  font-weight:normal;
+  margin:0;
+  padding:0;
+}
+
+h1
+{
+  font-size:1.60em;
+  margin:0 0 0.5em;
+  padding:0;
+}
+
+h2
+{
+  font-size:1.20em;
+  margin:0 0 0.5em;
+}
+
+a
+{
+  color:#2F5A8B;
+  text-decoration:none;
+}
+
+a:hover
+{
+  color:#4FA3F9;
+  text-decoration:underline;
+}
+
+img, a img
+{
+  border: none;
+}
+
+p
+{
+  font-family:"Lucida Grande",Verdana,sans-serif;
+  font-size:14px;
+  line-height:20px;
+  margin:0 0 12px;
+  padding:0;
+}
+
+:focus
+{
+  outline: 0;
+}
+
+.clear
+{
+  clear:both;
+}
+
+.wrapper
+{
+  height:auto;
+  margin:0 auto;
+  padding:0;
+  width:980px;
+}
+
+span.form-required
+{
+  color: #ffae00;
+}
+
+
+input
+{
+  font: 12px/100% "Arial";
+  color: #494949;
+}
+
+textarea, select
+{
+  font: 12px/160% "Arial";
+  color: #494949;
+}
+
+ol, ul
+{
+  margin:1em 0;
+  padding:0 0 0 32px;
+}
+
+.preview
+{
+  background-color:#FCFCE8;
+  border:1px solid #E5E58F;
+  margin:0;
+  padding:8px;
+}
+
+#container
+{
+  background:#fff;
+  width:100%;
+  margin:0 auto;
+  padding:0;
+}
+
+/*----------header styles----------*/
+#header
+{
+  background:#FDFDFD url('images/header-bg.png') repeat-x left top;
+  height:195px;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+#header h1
+{
+  color:#441F19;
+  font-family:"Times New Roman",Times,serif;
+  font-size:80px;
+  font-weight:400;
+  margin:0;
+  padding:16px 0 0;
+  width:950px;
+}
+
+#header h2
+{
+  font-size:32px;
+  margin:4px 0 0;
+  padding:6px 0 0 6px;
+  width:950px;
+}
+
+#header .siteName
+{
+  font-style:oblique;
+  line-height:1;
+  margin:-10px 0 10px;
+  width:960px;
+}
+
+#header .siteSlogan
+{
+  font-family:"Times New Roman",Times,serif;
+  font-style:oblique;
+  line-height:1;
+  margin:-10px 0 10px;
+  width:960px;
+}
+
+#header .wrapper
+{
+  height:160px;
+}
+
+
+/*----------navbar styles - primary links----------*/
+#navbar
+{
+  background-color:#FDF4DD;
+  border-bottom:1px solid #BBBBBB;
+  height:28px;
+  margin:0;
+  padding:0;
+  width:100%;
+}
+
+#navbar .wrapper
+{
+ height:auto;;
+}
+
+/*----------navtabs - primary links - styles---------- */
+#navtabs
+{
+  color:#666;
+  float:left;
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:18px;
+  font-weight:normal;
+  list-style-type:none;
+}
+
+ul#navtabs
+{
+  margin:3px 0 0;
+  padding:0;
+}
+#navtabs li
+{
+  margin:0;
+  padding:0 0 0 12px;
+  background:transparent url('images/tab1a.gif') no-repeat scroll left top;
+  float:left;
+  list-style-type:none;
+}
+
+#navtabs li a
+{
+  padding:5px 14px 2px 4px;
+  background:transparent url('images/tab1.gif') no-repeat scroll right top;
+  color:#666;
+  display:block;
+  text-decoration:none;
+}
+
+#navtabs li.cur, #navtabs li.over, #navtabs li:hover
+{
+  background:transparent url('images/tab2a.gif') no-repeat scroll left top;
+}
+
+#navtabs li strong, ul#navtabs li.cur a, ul#navtabs li.over a, ul#navtabs li:hover a
+{
+  padding:5px 14px 2px 4px;
+  background:transparent url('images/tab2.gif') no-repeat scroll right top;
+  color:#000;
+  display:block;
+  text-decoration:none;
+}
+
+ul#navtabs li ul
+{
+  border-top:1px solid #d9d5ca;
+  margin:0;
+  padding:0;
+  display:none;
+  float:left;
+  left:367px;
+  position:absolute;
+  top:250px;
+  width:310px;
+}
+
+
+/*----------main content styles----------*/
+#mainContent
+{
+  background:#fff;
+  font-size:14px;
+  line-height:20px;
+  margin:0;
+  padding:8px 0;
+
+}
+
+.contentLeft
+{
+  background:inherit;
+  float:left;
+  margin:0;
+  overflow:hidden;
+  padding:0 10px 0 0;
+  width:655px;
+}
+
+.sidebar
+{
+  background:inherit;
+  float:right;
+  margin:0;
+  padding:0 14px 10px 0;
+  width:300px;
+}
+
+/*----------footer styles----------*/
+#footer
+{
+  background:#2D382A url('images/footer-bg.png') repeat-x left top;
+  color:#eee;
+  height:auto;
+  margin:0;
+  padding:0 0 30px;
+  width:100%;
+}
+
+#footer a
+{
+  color:#FDF7E9;
+}
+
+#footer .columnLeft, #footer .columnMiddle ,#footer .columnRight
+{
+  background:#3D463A none repeat scroll 0%;
+  border:1px solid #172814;
+  float:left;
+  height:auto;
+  margin:16px 10px 0 0;
+  padding:0 20px;
+  width:272px;
+}
+
+#footer .footerContentLeft, #footer .footerContentRight
+{
+  background:#3D463A none repeat scroll 0%;
+  border:1px solid #172814;
+  height:auto;
+  margin:16px 10px 0 0;
+  padding:0 20px;
+  width:600px;
+}
+
+#footer .footerContentLeft
+{
+  float:left;
+}
+
+#footer .footerContentRight
+{
+  float:right;
+}
+
+#footer h2
+{
+
+  border-bottom:1px solid #aaa;
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:1.30em;
+  line-height:1.2em;
+  margin:0.5em 0;
+  padding:0;
+}
+
+.footerMessage
+{
+  background:#192815 none repeat scroll 0%;
+  border-top:2px solid #061303;
+  color:#AAAAAA;
+  margin:0 auto;
+  padding:10px 0;
+  text-align:center;
+  width:100%;
+}
+
+
+/*---------- page styles----------*/
+.pageTitle
+{
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:2em;
+  line-height:1.2em;
+  margin-bottom:0.25em;
+}
+
+.mission
+{
+  background:#FFF url('images/block-bg.jpg') repeat-x scroll bottom right;
+  border:1px solid #EEEEEE;
+  color:#333;
+  font-size:1em;
+  line-height:1.35em;
+  margin:0.32em 0 0.85em;
+  padding:1em;
+}
+
+.breadcrumb
+{
+  margin:0.32em 0;
+  padding:0;
+}
+
+.messages
+{
+  color:#C80000;
+  font-size:1.10em;
+  margin:0.75em 0 0.75em;
+  padding:0.5em 1em;
+}
+
+.messages ul
+{
+  margin:0;
+}
+
+
+/*----------node styles----------*/
+.node, .nodePage
+{
+  border-top:1px solid #fff;
+  margin:0 0 1.5em;
+  padding:10px 10px 0;
+}
+
+.nodePage
+{
+  padding:4px 10px 0px 10px;
+}
+
+.node:hover, .nodePage
+{
+  background:#FFF url('images/node-bg.png') repeat-x top left;
+  border-top:1px solid #E4E4E4;
+}
+
+h3,h4,h5,h6,.nodeTitle a
+{
+  color:#013466;
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:1.50em;
+}
+
+.nodeTitle a:hover
+{
+  color:#3670A8;
+  text-decoration:none;
+}
+
+.taxonomy
+{
+  border-bottom:1px solid #ddd;
+  border-left:1px solid #ddd;
+  color:#909090;
+  clear:left;
+  font-size:1em;
+  margin:0;
+  padding:0 0 0.3em 0.5em;
+}
+
+.submitted
+{
+  color:#909090;
+  font-size:1em;
+  margin:0 0 2px;
+  padding:0;
+}
+
+.node .content
+{
+  padding:6px 0 0;
+}
+
+.node .links
+{
+  font-size:14px;
+  padding:0 0 0.35em 0;
+  margin:0;
+}
+
+.picture
+{
+  float:right;
+  padding-right:1em;
+}
+
+.preview .node
+{
+  padding:0.75em;
+
+}
+
+/*----------block styles----------*/
+
+.block
+{
+  margin:0 0 1.5em;
+  padding:0;
+}
+
+.sidebar .block h2.title
+{
+  background-color:#FDF7E9;
+  border:1px solid #DDDDDD;
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:1.50em;
+  letter-spacing:0.050em;
+  line-height:1.2em;
+  margin:0 0 4px;
+  padding:1px;
+  text-align:center;
+}
+
+.block-region
+{
+  background-color:#FFFF66;
+  color:#333;
+  margin-bottom:4px;
+  margin-top:4px;
+  padding:3px;
+}
+
+.sidebar .block .content
+{
+  background:#FFF url('images/block-bg.jpg') repeat-x bottom right;
+  border:1px solid #ddd;
+  margin:0;
+  padding:4px 14px 8px;
+}
+
+.footerMessage .block
+{
+  margin:0;
+  padding:0;
+}
+
+/*----------comment styles----------*/
+.commentTitle
+{
+  font-size:1.25em;
+}
+
+.comment
+{
+  background-color:#F7F7F7;
+  border:1px solid #ccc;
+  margin:0 0 2em;
+  padding:1em;
+}
+
+h2.comments
+{
+  font-family:"Book Antiqua","Times New Roman",Times,serif;
+  font-size:2em;
+  line-height:1.2em;
+  margin-bottom:0.25em;
+}
+
+blockquote
+{
+  margin:0;
+  padding:0 0 8px;
+}
+
+blockquote p
+{
+  background:url('images/close-quote.gif') no-repeat right bottom;
+  color:#30457E;
+  font-family:serif;
+  margin:10px 20px;
+  padding-left:18px;
+  text-indent:-18px;
+  width:400px;
+}
+
+blockquote p:first-letter
+{
+  background:url('images/open-quote.gif') no-repeat left top;
+  padding-left:18px;
+}
+
+/*----------misc. styles----------*/
+hr
+{
+  margin:0;
+  padding:0;
+  border:none;
+  height:1px;
+  background:#5294c1;
+}
+
+dl
+{
+  margin:0.5em 0 1em 1.5em;
+}
+
+dl dd
+{
+  margin:0 0 .5em 1.5em;
+}
+
+dt
+{
+  font-size:1em;
+  margin:0.65em 0 0;
+}
+
+dl
+{
+  margin:0.5em 0 1em 1.5em;
+}
+
+dl dd
+{
+  margin:0 0 .5em 1.5em;
+}
+
+span.form-required
+{
+  color:#ffae00;
+}
+
+.description
+{
+  font-size:0.92em;
+  color:#5A5A5A;
+  margin-bottom:0.75em;
+}
+
+.form-checkboxes, .form-radios, .form-checkboxes .form-item, .form-radios .form-item
+{
+  margin:0.25em 0;
+}
+
+#center form
+{
+  margin-bottom:2em;
+}
+
+.form-button, .form-submit
+{
+  margin:0.5em 0.5em 1em 0;
+}
+
+#watchdog-form-overview .form-submit,
+.confirmation .form-submit,
+.search-form .form-submit,
+.poll .form-submit,
+fieldset .form-button, fieldset .form-submit,
+.sidebar .form-button, .sidebar .form-submit,
+table .form-button, table .form-submit
+{
+  margin: 0;
+}
+
+.box
+{
+  margin-bottom:2.5em;
+}
+
+div.admin
+{
+  margin:0;
+  padding:0;
+}
+
+
+.user-signature
+{
+  color:#949494;
+  font-family:Cursive, sans;
+  font-size:0.80em;
+  margin:0;
+  padding:0;
+}
+
+/**
+ * Admin Styles
+ */
+div.admin-panel,
+div.admin-panel .description,
+div.admin-panel .body,
+div.admin,
+div.admin .left,
+div.admin .right,
+div.admin .expert-link,
+div.item-list,
+.menu
+{
+  margin: 0;
+  padding: 0;
+}
+
+div.admin .left
+{
+  float: left;
+  width: 48%;
+}
+div.admin .right
+{
+  float: right;
+  width: 48%;
+}
+
+div.admin-panel
+{
+  padding: 1em 1em 1.5em;
+}
+
+div.admin-panel .description
+{
+  margin-bottom: 1.5em;
+}
+
+div.admin-panel dl
+{
+  margin: 0;
+}
+
+div.admin-panel dd
+{
+  color: #898989;
+  font-size: 0.92em;
+  line-height: 1.3em;
+  margin-top: -.2em;
+  margin-bottom: .65em;
+}
+
+/*----------list styles----------*/
+ul
+{
+  margin: 0.5em 0 1em;
+  padding: 0;
+}
+
+ol
+{
+  margin: 0.75em 0 1.25em;
+  padding: 0;
+}
+
+ol li, ul li
+{
+  margin: 0.4em 0 0.4em .5em;
+}
+
+ul.menu, .item-list ul
+{
+  line-height:1.2em;
+  margin: 0.35em 0 0 -0.5em;
+  padding: 0;
+}
+
+ul.menu ul, .item-list ul ul
+{
+  margin-left: 0em;
+}
+
+ol li, ul li, ul.menu li, .item-list ul li, li.leaf
+{
+  margin: 0.15em 0 0.15em .5em;
+}
+
+ul li, ul.menu li, .item-list ul li, li.leaf
+{
+  padding: 0 0 .2em 1.5em;
+  list-style-type: none;
+  list-style-image: none;
+  background: transparent url('images/menu-leaf.gif') no-repeat 1px .35em;
+}
+
+ol li
+{
+  padding: 0 0 .3em;
+  margin-left: 2em;
+}
+
+ul li.expanded
+{
+  background: transparent url(images/menu-expanded.gif) no-repeat 1px .35em;
+}
+
+ul li.collapsed
+{
+  background: transparent url(images/menu-collapsed.gif) no-repeat 0px .35em;
+}
+
+ul li.leaf a, ul li.expanded a, ul li.collapsed a
+{
+  display: block;
+}
+
+ul.inline li
+{
+  background: none;
+  margin: 0;
+  padding: 0 1em 0 0;
+}
+
+ol.task-list
+{
+  margin-left: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+ol.task-list li
+{
+  padding: 0.5em 1em 0.5em 2em;
+}
+
+ol.task-list li.active
+{
+  background: transparent url(images/task-list.png) no-repeat 3px 50%;
+}
+
+ol.task-list li.done
+{
+  color: #393;
+  background: transparent url(../../misc/watchdog-ok.png) no-repeat 0px 50%;
+}
+
+ol.task-list li.active
+{
+  margin-right: 1em;
+}
+
+fieldset ul.clear-block li
+{
+  margin: 0;
+  padding: 0;
+  background-image: none;
+}
+
+ul.primary, ul.primary li, ul.secondary
+{
+  border-bottom:1px solid #BBBBBB;
+  background: none;
+  height:auto;
+  margin:5px;
+  padding:0 ;
+}
+
+ul.secondary li
+{
+  background: none;
+  border-right:1px solid #CCCCCC;
+  display:inline;
+  padding:0 1em;
+}
+
+ul.links li {
+  background:none;
+  list-style:none;
+  margin:0 1em 0 0;
+  padding:0;
+}
+
+
+/*---------------user-login-form---remove center alignment---------------*/
+#user-login-form
+{
+  margin:0;
+  padding:0 0 0 10px;
+  text-align:left;
+}
+
+.form-item
+{
+  text-align:left;
+  margin:0;
+  padding:0;
+}
+
+
+/*---------------TinyMCE editor---------------*/
+body.mceContentBody
+{
+  background:#fff;
+  color:#000;
+  font-size:14px;
+}
+
+body.mceContentBody a:link
+{
+  color:#ff0000;
+}
+
+
+/*---------------table styles---------------*/
+table
+{
+  margin:1em 0;
+  width:100%;
+}
+
+thead th
+{
+  border-bottom:2px solid #AAAAAA;
+  color:#494949;
+  font-weight:bold;
+}
+
+td,th
+{
+  padding:.3em 0 .5em;
+}
+
+tr.even,tr.odd,tbody th
+{
+  border:solid #D5D6D7;
+  border-width:1px 0;
+}
+
+tr.even
+{
+  background-color:#fff;
+}
+
+td.region,td.module,td.container
+{
+  background-color:#FDF4DD;
+  border-bottom:1px solid #AAAAAA;
+  border-top:1.5em solid #fff;
+  color:#455067;
+  font-weight:bold;
+}
+
+tr:first-child td.region,tr:first-child td.module,tr:first-child td.container
+{
+  border-top-width:0;
+}
+
+td.menu-disabled,td.menu-disabled a
+{
+  background-color:#D5C2C2;
+  color:#000;
+}
+
+td.active
+{
+  background-color:#f7f7f7;
+}
+
+/**
+ * Watchdog.module
+ */
+tr.watchdog-user {
+  background-color: #fcf9e5;
+}
+
+tr.watchdog-user td.active {
+  background-color: #fbf5cf;
+}
+
+tr.watchdog-content {
+  background-color: #fefefe;
+}
+
+tr.watchdog-content td.active {
+  background-color: #f5f5f5;
+}
+
+tr.watchdog-warning {
+  background-color: #fdf5e6;
+}
+
+tr.watchdog-warning td.active {
+  background-color: #fdf2de;
+}
+
+tr.watchdog-error {
+  background-color: #fbe4e4;
+}
+
+tr.watchdog-error td.active {
+  background-color: #fbdbdb;
+}
+tr.watchdog-page-not-found, tr.watchdog-access-denied {
+  background: #d7ffd7;
+}
+tr.watchdog-page-not-found td.active, tr.watchdog-access-denied td.active {
+  background: #c7eec7;
+}
+
+/**
+ * Status report colors.
+ */
+table.system-status-report tr.error, table.system-status-report tr.error th {
+  background-color: #fcc;
+  border-color: #ebb;
+  color: #200;
+}
+table.system-status-report tr.warning, table.system-status-report tr.warning th {
+  background-color: #ffd;
+  border-color: #eeb;
+}
+table.system-status-report tr.ok, table.system-status-report tr.ok th {
+  background-color: #dfd;
+  border-color: #beb;
+}
+.view-content-cal .odd
+{
+  background-color:#fff;
+}

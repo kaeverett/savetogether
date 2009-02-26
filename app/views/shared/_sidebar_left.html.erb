@@ -1,0 +1,40 @@
+<div class="block block-tg_navigator" id="block-tg_navigator-0">
+    <h2 class="title">Navigation</h2>
+    <div class="content">
+        <ul class="menu">
+            <li <%= if params['action'] == 'index' then 'class="leaf"' else 'class="collapsed"' end %>>
+                <a href="<%= ActionController::Base.relative_url_root %>/" rel="nofollow" <%= 'class="active"' if params['action'] == 'index' %>>Home</a>
+            </li>
+            <li <%= if params['action'] == 'why_savings' then 'class="leaf"' else 'class="collapsed"' end %>>
+                <a href="<%= ActionController::Base.relative_url_root %>/why_savings" rel="nofollow" <%= 'class="active"' if params['action'] == 'why_savings' %>>Why Savings?</a>
+            </li>
+            <li <%= if params['action'] == 'faq' then 'class="leaf"' else 'class="collapsed"' end %>>
+                <a href="<%= ActionController::Base.relative_url_root %>/faq" rel="nofollow" <%= 'class="active"' if params['action'] == 'faq' %>>FAQ</a>
+            </li>
+            <li <%= if params['action'] == 'about_us' then 'class="leaf"' else 'class="collapsed"' end %>>
+                <a href="<%= ActionController::Base.relative_url_root %>/about_us" rel="nofollow" <%= 'class="active"' if params['action'] == 'about_us' %>>About Us</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="block block-tg_navigator" id="block-tg_navigator-1">
+    <h2 class="title">Login</h2>
+    <div class="content">
+        <div class="content">
+			<% if logged_in? -%>
+			  <div id="user-bar-greeting">Logged in as: <%= link_to_current_user :content_method => :login %> | 
+					<%= link_to 'My Account', user_profile_path(current_user), { :title => "My account" } %> |
+					<%= link_to "Log Out", logout_path, { :title => "Log out" }    %> </div>
+			<% else -%>
+			  <div id="user-bar-greeting"> 
+					<%= link_to_remote "Login", {:url => new_session_path, :method => :get}, :href => login_path %> |
+			  	<%= link_to "New Account", signup_path, { :title => "Create an account" } %></div>	
+			<% end -%>
+        </div>
+        <div class="content">
+            <%= yield :side %>
+        </div>
+        <div id="logins">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<h1>Editing pledge</h1>
+
+<% form_for(@pledge) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pledge %> |
+<%= link_to 'Back', pledges_path %>

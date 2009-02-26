@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+    <head>
+        <title>SaveTogether</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="Description of savetogether.org and what services it supplies." />
+        <meta name="keywords" content="save, savings, individual, development, account, IDA, matched" />
+        <meta name="robots" content="index,follow" />
+        <meta name="DC.title" content="SaveTogether" />
+        <link rel="shortcut icon" href="<%= ActionController::Base.relative_url_root %>/misc/favicon.ico" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/aggregator/aggregator.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/node/node.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/system/defaults.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/system/system.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/system/system-menus.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/modules/user/user.css?j" />
+        <link type="text/css" rel="stylesheet" media="all" href="<%= ActionController::Base.relative_url_root %>/drupal-themes/<%= APP_CONFIG['theme']['name'] %>/style.css?j" />
+        <script type="text/javascript" src="<%= ActionController::Base.relative_url_root %>/drupal-themes/misc/jquery.js?j">
+        </script>
+        <script type="text/javascript" src="<%= ActionController::Base.relative_url_root %>/drupal-themes/misc/drupal.js?j">
+        </script>
+        <script type="text/javascript" src="<%= ActionController::Base.relative_url_root %>/drupal-themes/<%= APP_CONFIG['theme']['name'] %>/asynchronous.js?j">
+        </script>
+        <script type="text/javascript">
+            <!--
+            //--><![CDATA[//><!--
+            jQuery.extend(Drupal.settings, {
+                "basePath": "/drupal6/"
+            });
+            //--><!]]>
+        </script>
+    </head>
+    <body class="body-both">
+        <div id="container">
+            <div id="header" class="clear-block">
+                <a id="logo" href="<%= ActionController::Base.relative_url_root %>/" title="Home"><img src="<%= ActionController::Base.relative_url_root %>/logo.png" alt="Home" /></a><h1 id='site-name'><a href="<%= ActionController::Base.relative_url_root %>/" title="Home">SaveTogether</a></h1>
+                <div id='site-slogan'>
+                    SaveTogether theme text
+                </div>
+                <div id="primary-links">
+                    <ul class="links">
+                        <li class="menu-138 <%= 'active' if params['action'] == 'index' %>">
+                            <a href="<%= ActionController::Base.relative_url_root %>/" title="Home" <%= 'class="active"' if params['action'] == 'index' %>>Home</a>
+                        </li>
+                        <li class="menu-139 first <%= 'active' if params['action'] == 'why_savings' %>">
+                            <a href="<%= ActionController::Base.relative_url_root %>/why_savings" title="Why Savings?" <%= 'class="active"' if params['action'] == 'why_savings' %>>Why Savings?</a>
+                        </li>
+                        <li class="menu-140 <%= 'active' if params['action'] == 'faq' %>">
+                            <a href="<%= ActionController::Base.relative_url_root %>/faq" title="FAQ" <%= 'class="active"' if params['action'] == 'faq' %>>FAQ</a>
+                        </li>
+                        <li class="menu-141 active-trail <%= 'active' if params['action'] == 'about_us' %>">
+                            <a href="<%= ActionController::Base.relative_url_root %>/about_us" title="About Us" <%= 'class="active"' if params['action'] == 'about_us' %>>About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="secondary-links">
+                </div>
+            </div>
+            <div id="wrapper" class="clear-block">
+                <div id="sidebar-left" class="sidebar">
+                    <%= render :partial => "shared/sidebar_left" %>
+                </div>
+
+                <div id="content">
+	              <%= flash_messages %>
+	              <%= yield :layout %>
+                </div>
+
+                <div id="sidebar-right" class="sidebar">
+                	<%= render :partial => "shared/sidebar_right" %>
+                </div>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

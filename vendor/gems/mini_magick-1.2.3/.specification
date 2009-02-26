@@ -1,0 +1,57 @@
+--- !ruby/object:Gem::Specification 
+name: mini_magick
+version: !ruby/object:Gem::Version 
+  version: 1.2.3
+platform: ruby
+authors: []
+
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-02-19 00:00:00 -08:00
+default_executable: 
+dependencies: []
+
+description: 
+email: 
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib
+- lib/image_temp_file.rb
+- lib/mini_magick.rb
+has_rdoc: false
+homepage: 
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- bin
+- bin
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.2.0
+signing_key: 
+specification_version: 2
+summary: 
+test_files: []
+

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+pledge_line_item1:
+  amount: 50
+  description: "Match for beneficiary"
+
+pledge_line_item2:
+  amount: 5
+  description: "Match for SaveTogether"
+  

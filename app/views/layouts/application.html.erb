@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/2002/REC-xhtml1-20020801/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Home | SaveTogether</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <%= javascript_include_tag :defaults %>
+        <%= stylesheet_link_tag 'savetogether' %>
+    </head>
+    <body class="front">
+        <div id="header-region"></div>
+        <div id="header">
+          <div id="h2">
+          </div>
+        </div>
+        
+        <div id="wrapper">
+            <div id="sidebar-left" class="clearfix">
+                <div id="block-user" class="block block-user">
+                    <h2>Navigation</h2>
+                    <div class="content">
+                        <% ubermenu :id => 'navlist' do |m| %>
+                          <% m.action 'Homepage', root_path %>
+                          <% if_logged_in? do %>
+                            <% m.action 'Members', members_path %>
+                            <% m.action 'Beneficiaries', beneficiaries_path %>
+                            <% m.action 'Organizations', organizations_path %>
+                          <% end %>
+                          <% if_admin? do %>
+                            <% m.action 'Admin', admin_controls_path %>
+                          <% end %>
+                        <% end %>
+                    </div>
+                </div>
+                <div id="block-user" class="block block-user">
+                    <div class="content">
+                      <%= render :partial => "shared/user_bar" %>
+                    </div>
+                    <div class="content">
+                        <%= yield :side %>
+                    </div>
+                    <div id="logins">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="main">
+              <%= flash_messages %>
+              <%= yield :layout %>
+            </div>
+        </div>
+        
+        <br clear="all"/>
+        <div id="footer">
+          <% if Rails.env.development? %>
+            <div id="footnotes_holder">
+            </div>
+            <%= render :partial => 'shared/debug' %>
+          <% end %>
+        </div>
+    </body>
+</html>
