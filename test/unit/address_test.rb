@@ -4,8 +4,14 @@ class AddressTest < ActiveSupport::TestCase
   fixtures :organizations
   
   def test_valid_address
-    address = Address.create(:line1 => "123 Test Street", :city => "Test City", :state => "WA", :zip => "98117")
-    assert !address.valid?
+    address = Address.create(:line1 => "123 Test Street", :city => "Test City", :state => "WA", :zip => "98117", 
+            :addressable => organizations(:testOrg))
+    assert address.valid?
+  end
+
+  def test_minimum_address
+    address = Address.create(:addressable => organizations(:testOrg))
+    assert address.valid?
   end
 
   def test_address_missing_belongs_to

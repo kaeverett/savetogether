@@ -63,13 +63,10 @@ class Address < ActiveRecord::Base
     'WY' => 'WYOMING'
   }
   
-  validates_presence_of :line1
-  validates_presence_of :city
-  validates_presence_of :state
-  validates_presence_of :zip
   validates_presence_of :addressable
   
   validates_format_of :zip,
     :with => %r{\d{5}(-\d{4})?},
-    :message => "should be 12345 or 12345-1234"
+    :message => "should be 12345 or 12345-1234",
+    :allow_blank => true
 end
