@@ -3,7 +3,7 @@ development:
   encoding: utf8
   database: savetogether_development
   username: root
-  password: 
+  password: save.together
   socket: /var/lib/mysql/mysql.sock
   timeout: 5000
 
@@ -15,7 +15,7 @@ test:
   encoding: utf8
   database: savetogether_test
   username: root
-  password:
+  password: save.together
   socket: /var/lib/mysql/mysql.sock
   timeout: 5000
 
@@ -24,6 +24,6 @@ production:
   encoding: utf8
   database: savetogether_production
   username: root
-  password:
+  password: save.together
   socket: /var/lib/mysql/mysql.sock
   timeout: 5000
