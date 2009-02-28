@@ -1,10 +1,10 @@
 <table class="records">
     <tr class="record">
-        <td class="photo-column" align="center"><%= image_tag @orgs[0].photo.thumbnails[0].public_filename, :size => @orgs[0].photo.thumbnails[0].image_size %>
+        <td class="photo-column" align="center"><%= photo_image_tag @orgs[0] %>
         </td>
-        <td class="photo-column" align="center"><%= image_tag @orgs[1].photo.thumbnails[0].public_filename, :size => @orgs[1].photo.thumbnails[0].image_size %>
+        <td class="photo-column" align="center"><%= photo_image_tag @orgs[1] %>
         </td>
-        <td class="photo-column" align="center"><%= image_tag @orgs[2].photo.thumbnails[0].public_filename, :size => @orgs[2].photo.thumbnails[0].image_size %>
+        <td class="photo-column" align="center"><%= photo_image_tag @orgs[2] %>
         </td>
     </tr>
     <tr class="record">
@@ -16,11 +16,11 @@
         </td>
     </tr>
     <tr class="record">
-        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[0].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[0].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[0].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename %>
         </td>
-        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[1].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[1].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[1].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename %>
         </td>
-        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[2].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename, :size => @orgs[2].groups[0].beneficiaries[0].photo.thumbnails[0].image_size %>
+        <td class="photo_thumb-column" align="center"><%= image_tag @orgs[2].groups[0].beneficiaries[0].photo.thumbnails[0].public_filename %>
         </td>
     </tr>
     <tr class="record">

@@ -48,6 +48,9 @@
                         <li class="menu-140 <%= 'active' if params['action'] == 'faq' %>">
                             <a href="<%= ActionController::Base.relative_url_root %>/faq" title="FAQ" <%= 'class="active"' if params['action'] == 'faq' %>>FAQ</a>
                         </li>
+                        <li class="menu-140 <%= 'active' if params['action'] == 'admin/controls' %>">
+                            <a href="<%= ActionController::Base.relative_url_root %>/admin/controls" title="Admin" <%= 'class="active"' if params['action'] == 'admin/controls' %>>Admin</a>
+                        </li>
                         <li class="menu-141 active-trail <%= 'active' if params['action'] == 'about_us' %>">
                             <a href="<%= ActionController::Base.relative_url_root %>/about_us" title="About Us" <%= 'class="active"' if params['action'] == 'about_us' %>>About Us</a>
                         </li>

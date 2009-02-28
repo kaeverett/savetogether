@@ -2,7 +2,7 @@ class RootController < ApplicationController
   helper OrganizationsHelper
   
   def index
-    @orgs = Organization.find_featured_organizations
+    @orgs = Organization.find(:all)
     
     respond_to do |format|
       format.html # index.html.erb

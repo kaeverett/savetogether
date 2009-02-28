@@ -22,6 +22,7 @@ perf/*
 public/cache/**/*
 public/javascripts/cached/
 public/javascripts/*packaged*
+public/photos/*
 public/stylesheets/cached/
 public/stylesheets/*packaged*
 rspec_out/

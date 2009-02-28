@@ -57,17 +57,6 @@ ActiveRecord::Schema.define(:version => 20090108053955) do
     t.datetime "updated_at"
   end
 
-  create_table "invitations", :force => true do |t|
-    t.integer  "sender_id"
-    t.string   "email"
-    t.string   "token"
-    t.datetime "sent_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "invitations", ["token"], :name => "index_invitations_on_token", :unique => true
-
   create_table "logged_exceptions", :force => true do |t|
     t.string   "exception_class"
     t.string   "controller_name"
@@ -77,21 +66,6 @@ ActiveRecord::Schema.define(:version => 20090108053955) do
     t.text     "environment"
     t.text     "request"
     t.datetime "created_at"
-  end
-
-  create_table "open_id_authentication_associations", :force => true do |t|
-    t.integer "issued"
-    t.integer "lifetime"
-    t.string  "handle"
-    t.string  "assoc_type"
-    t.binary  "server_url"
-    t.binary  "secret"
-  end
-
-  create_table "open_id_authentication_nonces", :force => true do |t|
-    t.integer "timestamp",  :null => false
-    t.string  "server_url"
-    t.string  "salt",       :null => false
   end
 
   create_table "organizations", :force => true do |t|

@@ -3,6 +3,10 @@ module ApplicationHelper
 
   FLASH_NOTICE_KEYS = [:error, :notice, :warning]
 
+  def photo_image_tag(record)
+    image_tag record.photo.public_filename(:thumb) if (!record.photo.blank?)
+  end
+
   def flash_messages
     return unless messages = flash.keys.select{|k| FLASH_NOTICE_KEYS.include?(k)}
     formatted_messages = messages.map do |type|      
@@ -31,22 +35,6 @@ module ApplicationHelper
 
 	def if_recaptcha?
 		yield if @bad_visitor
-	end
-
-	def in_beta?
-		APP_CONFIG['settings']['in_beta']
-	end
-
-	def if_in_beta?
-		yield if in_beta?
-	end
-
-	def unless_in_beta?
-		yield unless in_beta?
-	end
-
-	def if_invites_available?
-		yield if in_beta? and logged_in? and (current_user.invitation_limit > 0)
 	end
 
 	def focus_on_div(div)
